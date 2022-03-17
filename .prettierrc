@@ -1,0 +1,11 @@
+{
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "disableLanguages": [ "vue" ],
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "trailingComma": "es5"
+}
