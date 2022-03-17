@@ -1,12 +1,12 @@
-import userReducer from './reducers/user'
-import commonReducer from './reducers/common'
-import systemReducer from './reducers/system'
+import user from './reducers/user'
+import common from './reducers/common'
+import system from './reducers/system'
 import { createStore, combineReducers } from 'redux'
  
 const reducer = combineReducers({
-  userReducer,
-  systemReducer,
-  commonReducer
+  user,
+  common,
+  system
 })
 
 export default createStore(reducer)

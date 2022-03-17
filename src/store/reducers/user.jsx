@@ -1,5 +1,6 @@
 const userState = {
-  token: '' // 用户登录令牌
+  token: '', // 用户登录令牌
+  thirdToken: ''
 }
 
 export default function userReducer(state = userState, action) {

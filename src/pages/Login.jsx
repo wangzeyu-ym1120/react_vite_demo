@@ -1,27 +1,32 @@
 import { Button } from 'antd-mobile'
-import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 
 export default function Login() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { loginedRedirectUrl, loginedRedirectType } = useSelector(state => state.commonReducer)
+  const { loginedRedirectUrl, loginedRedirectType } = useSelector(state => state.common)
   const doLogin = () => {
-    dispatch({ type: 'setToken', payload: { token: 'sdbjadhj' } })
+    return new Promise(() => {
+      dispatch({ type: 'setToken', payload: { token: 'sdbjadhj' } })
     
-    if (!loginedRedirectUrl) {
-      navigate(-1)
-      return
-    }
+      if (!loginedRedirectUrl) {
+        navigate(-1)
+        return
+      }
 
-    if (loginedRedirectType === 'OUT') {
-      window.location = loginedRedirectUrl
-      return
-    }
+      if (loginedRedirectType === 'OUT') {
+        window.location = loginedRedirectUrl
+        return
+      }
 
-    navigate(loginedRedirectUrl, { replace: true })
+      navigate(loginedRedirectUrl, { replace: true })
+    })
+    .then(() => {
+      dispatch({ type: 'clearRedirectOption' })
+    })
   }
-
+  
   return (
     <div>
       LOGIN PAGE

@@ -1,14 +1,15 @@
-import Home from '../pages/Home'
-import About from "@/pages/About"
-import Default from "pages/404"
-import Login from '@/pages/Login'
+import Home from 'pages/Home'
+import About from 'pages/About'
+import Login from 'pages/Login'
+import Default from 'pages/404'
 
 export default[
   {
     path: '/',
     element: <Home />,
     meta: {
-      loginAuth: true
+      loginAuth: true,
+      thirdAuth: true
     }
   },
   {
@@ -17,7 +18,11 @@ export default[
   },
   {
     path: '/about',
-    element: <About />
+    element: <About />,
+    meta: {
+      loginAuth: true,
+      thirdAuth: true
+    }
   },
   {
     path: '/404',

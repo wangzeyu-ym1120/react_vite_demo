@@ -1,5 +1,5 @@
-import routeList from './routes'
 import './App.scss'
+import routeList from './routes'
 import { doFilterRoute } from './filters'
 import { useRoutes } from 'react-router-dom'
 
