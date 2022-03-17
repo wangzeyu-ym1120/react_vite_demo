@@ -5,14 +5,8 @@ const commonState = {
 
 export default function commonReducer(state = commonState, action) {
   switch(action.type) {
-    case 'setLoginedRedirectUrl':
+    case 'setCommonState':
       return { ...state, ...action.payload }
-    case 'clearRedirectOption':
-      const temPayload = {
-        loginedRedirectUrl: '',
-        loginedRedirectType: 'IN'
-      }
-      return { ...state, ...tem }
     default: 
       return state
   }

@@ -9,7 +9,7 @@ const systemState = {
 
 export default function systemReducer(state = systemState, action) {
   switch(action.type) {
-    case 'initSystemType':
+    case 'setSystemState':
       return { ...state, ...action.payload }
     default: 
       return state

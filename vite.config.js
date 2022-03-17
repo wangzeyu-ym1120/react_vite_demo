@@ -12,6 +12,7 @@ export default defineConfig(mode => ({
     alias: [
       { find: '@', replacement: resolve(process.cwd(), 'src') },
       { find: 'pages', replacement: resolve(process.cwd(), 'src/pages') },
+      { find: 'store', replacement: resolve(process.cwd(), 'src/store') },
       { find: 'utils', replacement: resolve(process.cwd(), 'src/utils') },
       { find: 'assets', replacement: resolve(process.cwd(), 'src/assets') },
       { find: 'components', replacement: resolve(process.cwd(), 'src/components') }

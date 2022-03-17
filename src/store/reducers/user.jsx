@@ -5,7 +5,7 @@ const userState = {
 
 export default function userReducer(state = userState, action) {
   switch(action.type) {
-    case 'setToken':
+    case 'setUserState':
       return { ...state, ...action.payload }
     default: 
       return state
